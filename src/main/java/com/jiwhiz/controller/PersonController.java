@@ -1,17 +1,15 @@
-package com.jiwhiz.demo;
+package com.jiwhiz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jiwhiz.domain.Person;
 import com.jiwhiz.repository.PersonRepository;
 
-@SpringBootApplication
 @RestController
-public class DemoApplication {
+public class PersonController {
+
 	@Autowired
 	private PersonRepository repository;
 
@@ -21,7 +19,4 @@ public class DemoApplication {
 		return "Hello " + p.getName() + "!";
 	}
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(DemoApplication.class, args);
-	}
 }

@@ -6,3 +6,4 @@ CREATE TABLE person (
 );
 
 insert into person (first_name, last_name) values ('Yuan', 'Ji');
+insert into person (first_name, last_name) values ('fred', 'maquet');
